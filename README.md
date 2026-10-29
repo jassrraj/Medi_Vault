@@ -17,7 +17,8 @@ The encrypted-IPFS, MetaMask, and local-contract paths are implemented. They bec
 1. Create a PostgreSQL database and copy `server/.env.example` to `server/.env`.
 2. Set a long, unique `JWT_SECRET`; do not use the example value in production.
 3. Add `PINATA_JWT` and a 64-character hexadecimal `FILE_ENCRYPTION_MASTER_KEY` to `server/.env`.
-4. Run `npm run dev` from the project root and `npm start` from `server/`.
+4. For a hosted PostgreSQL database, set `DATABASE_URL` to its connection string; otherwise configure the local `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` values.
+5. Run `npm run dev` from the project root and `npm start` from `server/`.
 
 The server creates `users`, `health_records`, and `record_access_requests` on startup.
 
